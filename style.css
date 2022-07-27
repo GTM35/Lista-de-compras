@@ -1,23 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 :root {
   --color-bg: #f1f5f8;
   --color-btn: #a5d5f8;
+
+  --color-btn-edit: #6be675;
+  --color-hover-btn-edit: #25bb32;
+
+  --color-btn-del: #e66b6b;
+  --color-hover-btn-del: #bb2525;
+
   --color-font-normal: #617d98;
   --color-hover-btn: #49a6e9;
-  --color-title: #063251;
+  --color-title: #102a42;
   --font-family-normal: "Open Sans", sans-serif;
   --font-family-title: "Roboto", sans-serif;
+  --letter-space: 0.25rem;
 }
 
 body {
   background-color: var(--color-bg);
+  font-family: var(--font-family-normal);
 }
 
 .form-container {
@@ -30,4 +39,160 @@ body {
   max-width: 35rem;
   padding: 2rem;
   width: 90vw;
+}
+
+/* Alert Area */
+
+.alert {
+  font-size: 0.688rem;
+  color: var(--color-font-normal);
+  line-height: 1.063rem;
+  letter-spacing: var(--letter-space);
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  line-height: 1.05rem;
+}
+
+.alertDel {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alertAdd {
+  color: #155724;
+  background: #d4edda;
+}
+
+/* Title Area */
+
+.title {
+  font-size: 1.75rem;
+  font-family: var(--font-family-title);
+  color: var(--color-title);
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  letter-spacing: var(--letter-space);
+}
+
+/* Data Area */
+
+.data-container {
+  display: flex;
+}
+
+#input-item {
+  padding: 0.25rem;
+  padding-left: 1rem;
+  flex: 1 0 auto;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border: none;
+  background-color: var(--color-bg);
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-font-normal);
+  border: 2px solid transparent;
+}
+
+#input-item::placeholder {
+  color: var(--color-font-normal);
+  font-size: 1rem;
+  font-family: var(--font-family-normal);
+}
+
+.button-submit {
+  flex: 0 0 5rem;
+  border: 2px solid transparent;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: var(--color-btn);
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.button-submit:hover {
+  background-color: var(--color-hover-btn);
+  color: #fff;
+}
+
+/* Item Area */
+
+.items-container {
+  margin-top: 2rem;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  transition: all linear 0.3s;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.item:hover {
+  background-color: var(--color-bg);
+}
+
+.item-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color-title);
+  letter-spacing: 2px;
+}
+
+.btn {
+  font-size: 0.7rem;
+  margin: 0 0.15rem;
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+
+.edit {
+  color: var(--color-btn-edit);
+}
+
+.edit:hover {
+  color: var(--color-hover-btn-edit);
+}
+
+.del {
+  color: var(--color-btn-del);
+}
+
+.del:hover {
+  color: var(--color-hover-btn-del);
+}
+
+/* Button Clear All */
+
+.btn-clearItems {
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  width: 10rem;
+  height: 1.5rem;
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--color-btn-del);
+  transition: all linear 0.3s;
+  letter-spacing: var(--letter-space);
+  text-transform: capitalize;
+}
+
+.btn-clearItems:hover {
+  color: var(--color-hover-btn-del);
 }

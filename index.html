@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/5d221a91fc.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Lista de compras</title>
   </head>
   <body>
     <div class="form-container">
-      <form action="">
+      <form class="form" action="">
         <div class="alert-container">
-          <p class="alert">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="alert alertDel">Please Enter Value</p>
         </div>
         <div class="title-container">
-          <h1>lista de compras</h1>
+          <h1 class="title">lista de compras</h1>
         </div>
         <div class="data-container">
-          <input type="text" name="" id="" />
+          <input
+            type="text"
+            name="input-item"
+            id="input-item"
+            placeholder="Adicione um item..."
+          />
           <input
             class="button-submit"
             id="btn-submit"
@@ -26,6 +35,24 @@
           />
         </div>
       </form>
+
+      <div class="items-container">
+        <div class="list-items">
+          <article class="item">
+            <p class="item-text">Aaaa</p>
+            <div class="buttons-control">
+              <button class="btn edit">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="btn del">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <button class="btn-clearItems">Limpar Items</button>
     </div>
     <script src="app.js" type="text/Javascript"></script>
   </body>
