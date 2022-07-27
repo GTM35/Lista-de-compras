@@ -1,7 +1,7 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -9,9 +9,25 @@
 :root {
   --color-bg: #f1f5f8;
   --color-btn: #a5d5f8;
+  --color-font-normal: #617d98;
   --color-hover-btn: #49a6e9;
   --color-title: #063251;
-  --color-font-normal: #617d98;
   --font-family-normal: "Open Sans", sans-serif;
   --font-family-title: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+.form-container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin: 8rem auto 0px;
+  max-width: 35rem;
+  padding: 2rem;
+  width: 90vw;
 }
